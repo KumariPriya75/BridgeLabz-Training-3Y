@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+body {
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+font-family: Arial, sans-serif;
+background-color: #f4f7fb;
+color: #222;
+}
+
+header {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 70px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 0 5%;
+background-color: #172554;
+color: white;
+}
+
+header h2 {
+font-size: 1.5rem;
+}
+
+nav {
+display: flex;
+gap: 2em;
+}
+
+nav a {
+color: white;
+text-decoration: none;
+font-size: 1em;
+}
+
+nav a:hover {
+color: #93c5fd;
+}
+
+main {
+flex: 1;
+padding-top: 70px;
+}
+
+.home {
+min-height: 75vh;
+display: flex;
+justify-content: space-around;
+align-items: center;
+padding: 5%;
+background-color: #dbeafe;
+}
+
+.intro {
+width: 50%;
+}
+
+.intro h1 {
+font-size: 42px;
+margin-bottom: 20px;
+color: #172554;
+}
+
+.intro p {
+width: 90%;
+font-size: 1.1rem;
+line-height: 1.7;
+margin-bottom: 25px;
+}
+
+.button {
+padding: 12px 25px;
+background-color: #172554;
+color: white;
+text-decoration: none;
+border-radius: 8px;
+}
+
+.home img {
+width: 250px;
+height: 250px;
+object-fit: cover;
+border-radius: 50%;
+border: 5px solid #172554;
+}
+
+.about {
+min-height: 40vh;
+padding: 4rem 10%;
+background-color: white;
+text-align: center;
+}
+
+.about h2, .contact h2 {
+font-size: 2rem;
+margin-bottom: 1rem;
+color: #172554;
+}
+
+.about p {
+max-width: 700px;
+margin: auto;
+font-size: 1.1rem;
+line-height: 1.8;
+}
+
+.contact {
+min-height: 30vh;
+padding: 3rem 10%;
+background-color: #dbeafe;
+text-align: center;
+}
+
+.contact p {
+margin: 10px;
+}
+
+footer {
+background-color: #172554;
+color: white;
+text-align: center;
+padding: 1.5rem;
+margin-top: auto;
+}
+
+@media (max-width: 600px) {
+header {
+height: auto;
+padding: 15px;
+flex-direction: column;
+}
+
+main {
+    padding-top: 100px;
+}
+
+.home {
+    flex-direction: column;
+    text-align: center;
+}
+
+.intro {
+    width: 100%;
+}
+
+.intro p {
+    width: 100%;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+}
