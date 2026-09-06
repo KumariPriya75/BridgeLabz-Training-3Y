@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+.blog-layout {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+    gap: 20px;
+    padding: 20px;
+}
+
+header {
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #222;
+    color: white;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #00bcd4;
+}
+
+aside {
+    grid-area: sidebar;
+    padding: 25px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+aside h2 {
+    margin-bottom: 20px;
+}
+
+aside ul {
+    list-style: none;
+}
+
+aside li {
+    padding: 12px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+article {
+    padding: 30px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+article h2 {
+    margin-bottom: 15px;
+}
+
+article p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+article a {
+    color: #0077cc;
+    text-decoration: none;
+}
+
+footer {
+    grid-area: footer;
+    padding: 20px;
+    background-color: #222;
+    color: white;
+    text-align: center;
+}
+
+@media (max-width: 800px) {
+    .blog-layout {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr auto;
+        grid-template-areas:
+            "header"
+            "main"
+            "sidebar"
+            "footer";
+    }
+
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    main {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
