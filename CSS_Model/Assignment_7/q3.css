@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    background-color: #333;
+    color: white;
+    z-index: 1;
+}
+
+main {
+    padding-top: 75px;
+    padding-bottom: 60px;
+}
+
+section {
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.linear {
+    background: linear-gradient(to right, #ff9966, #ff5e62);
+    background-attachment: fixed;
+}
+
+.radial {
+    background: radial-gradient(circle, #87ceeb, #4682b4);
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    background-color: #333;
+    color: white;
+}

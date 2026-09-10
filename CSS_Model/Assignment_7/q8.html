@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model Exploration</title>
+    <link rel="stylesheet" href="q8.css">
+</head>
+<body>
+
+    <header>
+        <h1>CSS Box Model</h1>
+    </header>
+
+    <main>
+        <section class="box-model">
+            <div class="margin-layer">
+                <div class="border-layer">
+                    <div class="padding-layer">
+                        <div class="content">
+                            Content
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="description">
+                <h2>Box Model Layers</h2>
+                <p><strong>Content:</strong> The actual text or information inside the element.</p>
+                <p><strong>Padding:</strong> Space between the content and the border.</p>
+                <p><strong>Border:</strong> The line surrounding the padding and content.</p>
+                <p><strong>Margin:</strong> Space outside the border that separates elements.</p>
+            </div>
+        </section>
+
+        <section class="comparison">
+            <h2>Box-Sizing Comparison</h2>
+
+            <div class="comparison-boxes">
+                <div class="default-box">
+                    <h3>Default</h3>
+                    <p>box-sizing: content-box</p>
+                </div>
+
+                <div class="border-box">
+                    <h3>Border Box</h3>
+                    <p>box-sizing: border-box</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>CSS Box Model Practice</p>
+    </footer>
+
+</body>
+</html>
