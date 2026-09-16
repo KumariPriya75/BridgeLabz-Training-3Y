@@ -1,0 +1,50 @@
+/* Element selector */
+p {
+    margin: 15px;
+}
+
+/* Class selector */
+.highlight {
+    background-color: yellow;
+}
+
+/* ID selector */
+#special {
+    color: red;
+}
+
+/* Attribute selector */
+a[href] {
+    color: blue;
+}
+
+/* Descendant selector */
+.parent p {
+    background-color: lightblue;
+}
+
+/* Child selector */
+ul > li {
+    padding: 5px;
+}
+
+/* Adjacent sibling selector */
+ul + .next {
+    color: green;
+}
+
+/* General sibling selector */
+ul ~ p {
+    font-weight: bold;
+}
+
+header,
+main,
+footer {
+    padding: 20px;
+    text-align: center;
+}
+
+section {
+    padding: 20px;
+}
