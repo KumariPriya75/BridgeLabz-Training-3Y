@@ -1,0 +1,104 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f8fc;
+    color: #222;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    background-color: #1769aa;
+    color: white;
+    padding: 25px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+/* Image Container */
+.comparison-container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 35px auto;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex: 1;
+}
+
+/* Image Cards */
+.image-card {
+    background-color: white;
+    width: 45%;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.image-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+}
+
+.image-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: filter 0.4s ease;
+}
+
+/* Filtered Image */
+.filtered-image {
+    filter: grayscale(100%);
+}
+
+/* Remove filter on hover */
+.filtered-image:hover {
+    filter: none;
+}
+
+.image-card h2 {
+    color: #1769aa;
+    margin: 15px 0 10px;
+}
+
+.image-card p {
+    line-height: 1.5;
+}
+
+/* Footer */
+footer {
+    background-color: #1769aa;
+    color: white;
+    padding: 18px;
+}
+
+/* Responsive Layout */
+@media (max-width: 700px) {
+    .comparison-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-card {
+        width: 100%;
+    }
+
+    .image-card img {
+        height: 220px;
+    }
+}

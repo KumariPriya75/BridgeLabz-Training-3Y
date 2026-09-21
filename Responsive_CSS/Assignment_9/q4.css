@@ -1,0 +1,87 @@
+
+/* Reset default spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #222;
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    background-color: #234e70;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+/* Main content */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px 20px;
+}
+
+/* Typography section */
+.typography-section {
+    max-width: 1000px;
+    text-align: center;
+
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive heading using clamp() */
+.typography-section h2 {
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    color: #234e70;
+    margin-bottom: 25px;
+}
+
+/* Responsive paragraph using clamp() */
+.typography-section p {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+/* Footer */
+footer {
+    background-color: #234e70;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Improve readability below 700px */
+@media (max-width: 700px) {
+
+    main {
+        padding: 25px 15px;
+    }
+
+    .typography-section {
+        padding: 25px 20px;
+    }
+
+    .typography-section p {
+        line-height: 1.8;
+        margin-bottom: 25px;
+    }
+}

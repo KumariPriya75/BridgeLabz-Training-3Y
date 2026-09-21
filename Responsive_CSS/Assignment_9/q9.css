@@ -1,0 +1,112 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f8fc;
+    color: #222;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    background-color: #1769aa;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+/* Concept Grid */
+.concept-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 35px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    flex: 1;
+}
+
+/* Concept Boxes */
+.concept-box {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    border: 2px solid #d7e9f8;
+    transition: transform 0.3s ease,
+                background 0.3s ease,
+                color 0.3s ease;
+}
+
+.concept-box:hover {
+    transform: translateY(-8px);
+    background: linear-gradient(135deg, #1769aa, #4ca1d8);
+    color: white;
+}
+
+.concept-box h2 {
+    color: #1769aa;
+    margin-bottom: 15px;
+}
+
+.concept-box:hover h2 {
+    color: white;
+}
+
+.concept-box p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Code Examples */
+pre {
+    background-color: #eef5fb;
+    color: #222;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-size: 0.85rem;
+}
+
+.concept-box:hover pre {
+    background-color: white;
+}
+
+/* Footer */
+footer {
+    background-color: #1769aa;
+    color: white;
+    text-align: center;
+    padding: 18px;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .concept-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .concept-container {
+        grid-template-columns: 1fr;
+    }
+
+    .concept-box {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 1.6rem;
+    }
+}

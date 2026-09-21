@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design Concepts</title>
+    <link rel="stylesheet" href="q9.css">
+</head>
+<body>
+
+    <header>
+        <h1>Responsive Design Concepts</h1>
+        <p>Learn the basic principles of responsive websites</p>
+    </header>
+
+    <main class="concept-container">
+
+        <section class="concept-box">
+            <h2>Fluid Layouts</h2>
+            <p>
+                Fluid layouts use flexible widths such as percentages
+                instead of fixed pixel values.
+            </p>
+
+            <pre>
+.container {
+    width: 90%;
+}
+            </pre>
+        </section>
+
+        <section class="concept-box">
+            <h2>Flexible Media</h2>
+            <p>
+                Flexible media allows images and videos to resize
+                according to the screen width.
+            </p>
+
+            <pre>
+img {
+    max-width: 100%;
+    height: auto;
+}
+            </pre>
+        </section>
+
+        <section class="concept-box">
+            <h2>Breakpoints</h2>
+            <p>
+                Breakpoints are screen sizes where the website layout
+                changes using media queries.
+            </p>
+
+            <pre>
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+}
+            </pre>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Responsive Web Design | Q9</p>
+    </footer>
+
+</body>
+</html>
