@@ -1,0 +1,8 @@
+/* Override Bootstrap theme variables for a custom brown/tan look */
+:root {
+  --bs-primary: #8b5e3c;
+  --bs-font-sans-serif: 'Merriweather', serif;
+}
+body {
+  font-family: var(--bs-font-sans-serif);
+}
