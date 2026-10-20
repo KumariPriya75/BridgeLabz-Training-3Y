@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q9. Odd–Even Number Analyzer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+            line-height: 1.5;
+        }
+        pre {
+            padding: 16px;
+            background: #f3f4f6;
+            border-radius: 8px;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <h1>Q9. Odd–Even Number Analyzer</h1>
+    <p>Open the browser console to see the logged results too.</p>
+    <pre id="output">Running JavaScript...</pre>
+
+    <script>
+        // Helper to display results on the page as well as in the console.
+        function showOutput(message) {
+            const output = document.getElementById("output");
+            if (output.textContent === "Running JavaScript...") {
+                output.textContent = message;
+            } else {
+                output.textContent += "\n\n" + message;
+            }
+        }
+    </script>
+    <script src="q9.js"></script>
+</body>
+</html>
