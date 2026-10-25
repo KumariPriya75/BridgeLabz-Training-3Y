@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <form action="/submit" method="post">
+        <label for="name">Name</label><br>
+        <input id="name" type="text" placeholder="Enter your name" name="name" required> >
+         <br>
+        <label for="email">Email</label><br>
+        <input id="email" type="email" placeholder="Enter your email" name="email">
+        <br>
+        <label for="pass">Password</label><br>
+        <input id="pass" type="password" >
+        <br>
+        <label for="phone">Phone no.</label><br>
+        <input id="phone" type="tel" name="phone" maxlength="10" placeholder="Enter your phone number">
+        <input id="date" type="date" name="date"><br>
+        <br>
+       
+       <label for="flowers">Choose a flower:</label>
+        <select name="flowers" id="flowers">
+            <option value="option1">Rose</option>
+            <option value="option2">Daisy</option>
+            <option value="option3">Tulip</option>
+            <option value="option4">Lily</option>
+        </select><br>
+        <section>
+        <input id="Rose" type="radio" name="flower" value="Rose">
+        <label for="Rose">Rose</label>
+        <input id="Daisy" type="radio" name="flower" value="Daisy">
+        <label for="Daisy">Daisy</label>
+        <input id="Tulip" type="radio" name="flower" value="Tulip">
+        <label for="Tulip">Tulip</label>
+        <input id="Lily" type="radio" name="flower" value="Lily">
+        <label for="Lily">Lily</label>
+        <br>
+        </section>
+        <input type="file" name="file">
+        <br>
+        <input type="range" max="3" min="0">
+        <iframe src="https://www.example.com"></iframe>
+        <br><input type="submit">
+    </form>
+</body>
+</html>
