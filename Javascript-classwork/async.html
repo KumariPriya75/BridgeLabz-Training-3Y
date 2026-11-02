@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Demo API</h1>
+    <h2>Comments</h2>
+    <div id="comments"></div>
+
+     <h2>Photos</h2>
+     <div id="photos"></div>
+
+     <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>PostID</th>
+                <th>Name</th>
+                
+
+            </tr>
+        </thead>
+     </table>
+<script>
+    async function getdata(){
+        try{
+            let res=await fetch("https://jsonplaceholder.typicode.com/comments")
+            let data=await res.json()
+            console.log(data);
+            let ima=await fetch("https://jsonplaceholder.typicode.com/photos")
+            let data2=await ima.json()
+
+            console.log("data",data);
+            console.log("img",data2);
+        }catch (error){
+            console.log(error);
+        }
+    }
+    getdata()
+
+</script>
+</body>
+</html>

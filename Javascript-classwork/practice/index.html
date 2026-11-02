@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    
+    <style>
+        .btn-container{
+            display:flex;
+            width:400px;
+            flex-wrap:wrap;
+            height:500px;
+        }
+        .btn{
+            width:100px;
+        }
+
+        .input{
+            width:340px;
+            padding:30px;
+            font-size: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <input class="input" disabled>
+    <div class="btn-container">
+        <button class="btn" value="7">7</button>
+        <button class="btn" value="8">8</button>
+        <button class="btn" value="9">9</button>
+        <button class="btn" value="/">/</button>
+        <button class="btn" value="4">4</button>
+        <button class="btn" value="5">5</button>
+        <button class="btn" value="6">6</button>
+        <button class="btn" value="*">*</button>
+        <button class="btn" value="1">1</button>
+        <button class="btn" value="2">2</button>
+        <button class="btn" value="3">3</button>
+        <button class="btn" value="-">-</button>
+        <button class="btn" value="0">0</button>
+        <button class="btn" value="+">+</button>
+        <button class="btn" value="=">=</button>
+        <button class="btn" value="CE">CE</button>
+
+    </div>
+    
+</body>
+<script>
+    const inputEL = document.querySelector("input")
+    const btnsE1=document.querySelectorAll(".btn");
+    
+    btnsE1.forEach((ele)=>{
+       ele.addEventListener("click",(e)=>{
+        if(e.target.innerHTML=="="){
+            let ans=eval(inputEL.value)
+            inputEL.value=ans;
+            return;
+        }
+        if(e.target.innerHTML=="CE"){
+            inputEL.value=""
+            return;
+        }
+        inputEL.value+=e.target.innerHTML
+       })
+    })
+</script>
+</html>

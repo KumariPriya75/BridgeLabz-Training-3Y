@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <!---- <link rel="stylesheet" href="./style.css">-->
+</head>
+<body>
+   <!---- <h1 id="heading">Welcome to my website</h1>
+    <h2>welcome</h2>
+    <button id="btn">click me</button>
+    <div class="ok">ok</div><-->
+    <h1 id="heading" class="active">0</h1>
+
+    <button id="inc">Increment</button>
+    <button id="dec">Decrement</button>
+    <button id="toggle">Toggle</button>
+    <style>
+      .active{
+            visibility: visible;
+        }
+        .notactive{
+            visibility: hidden;
+        }
+    </style>
+</body>
+<!--<script src="script.js">-->
+<script>
+
+ //dom,select the element,change the content of html
+
+ const incE1 = document.querySelector("#inc");
+ const decE1 = document.querySelector("#dec");
+ const toggleE1 = document.querySelector("#toggle");
+ const headingE1 = document.querySelector("#heading");
+
+ let count=0;
+
+ toggleE1.addEventListener("click",()=>{
+    headingE1.classList.toggle("notactive");
+ })
+
+ incE1.addEventListener("click",()=>{
+    count++;
+    headingE1.textContent=count;
+ })
+ decE1.addEventListener("click",()=>{
+    count--;
+    headingE1.textContent=count;
+ })
+ </script>
+</html>
