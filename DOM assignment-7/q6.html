@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Table Filter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h2>Student Search</h2>
+<input id="searchInput" type="text" placeholder="Search by name, branch or CGPA">
+<table>
+    <thead><tr><th>Name</th><th>Branch</th><th>CGPA</th></tr></thead>
+    <tbody id="studentRows">
+        <tr><td>Aarav</td><td>CSE</td><td>8.7</td></tr>
+        <tr><td>Priya</td><td>AI &amp; DS</td><td>9.1</td></tr>
+        <tr><td>Rohan</td><td>ECE</td><td>7.8</td></tr>
+        <tr><td>Meera</td><td>IT</td><td>8.4</td></tr>
+        <tr><td>Kabir</td><td>AI &amp; DS</td><td>8.9</td></tr>
+    </tbody>
+</table>
+<p id="noResults" hidden>No results found</p>
+    </main>
+    <script src="q6.js"></script>
+</body>
+</html>
