@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Q5 - Avoiding Callback Hell</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            margin: 30px;
+            color: #222;
+        }
+        h2 { color: #333; }
+        pre {
+            background: white;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            white-space: pre-wrap;
+        }
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+        }
+        .card {
+            background: white;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+        }
+        .card img {
+            width: 100%;
+            height: 130px;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+    <h2>Q5 - Avoiding Callback Hell</h2>
+    <pre id="output"></pre>
+    <script>
+const output = document.getElementById("output");
+
+function log(message) {
+    output.textContent += message + "\\n";
+}
+
+// First: nested callbacks (callback hell).
+function callbackPipeline() {
+    log("Callback pipeline:");
+    setTimeout(() => {
+        log("Design");
+        setTimeout(() => {
+            log("Build");
+            setTimeout(() => {
+                log("Test");
+                setTimeout(() => {
+                    log("Deploy");
+                    setTimeout(() => {
+                        log("Celebrate");
+                    }, 1000);
+                }, 1000);
+            }, 1000);
+        }, 1000);
+    }, 1000);
+}
+
+// Each stage returns a Promise.
+function stage(name) {
+    return new Promise(resolve => {
+        setTimeout(() => {
+            log(name);
+            resolve();
+        }, 1000);
+    });
+}
+
+async function asyncPipeline() {
+    log("Async/await pipeline:");
+    await stage("Design");
+    await stage("Build");
+    await stage("Test");
+    await stage("Deploy");
+    await stage("Celebrate");
+    log("Pipeline completed.");
+}
+
+callbackPipeline();
+
+// Run the async version after the callback version finishes.
+setTimeout(() => {
+    asyncPipeline();
+}, 5500);
+
+// async/await makes asynchronous steps look like simple sequential code.
+    </script>
+</body>
+</html>

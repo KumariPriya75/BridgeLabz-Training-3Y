@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Q6 - E-Commerce Product Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            margin: 30px;
+            color: #222;
+        }
+        h2 { color: #333; }
+        pre {
+            background: white;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            white-space: pre-wrap;
+        }
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+        }
+        .card {
+            background: white;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+        }
+        .card img {
+            width: 100%;
+            height: 130px;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+    <h2>Q6 - E-Commerce Product Dashboard</h2>
+    <div id="products" class="products"></div><pre id="output">Loading products...</pre>
+    <script>
+const output = document.getElementById("output");
+const productArea = document.getElementById("products");
+
+async function loadProducts() {
+    try {
+        const response = await fetch("https://fakestoreapi.com/products");
+
+        if (!response.ok) {
+            throw new Error("Request failed");
+        }
+
+        const products = await response.json();
+        output.textContent = "";
+
+        products.forEach(product => {
+            console.log("Product: " + product.title);
+            console.log("Price: $" + product.price);
+            console.log("Image: " + product.image);
+
+            const card = document.createElement("div");
+            card.className = "card";
+
+            const image = document.createElement("img");
+            image.src = product.image;
+            image.alt = product.title;
+
+            const title = document.createElement("h4");
+            title.textContent = product.title;
+
+            const price = document.createElement("p");
+            price.textContent = "$" + product.price;
+
+            card.appendChild(image);
+            card.appendChild(title);
+            card.appendChild(price);
+            productArea.appendChild(card);
+        });
+    } catch (error) {
+        output.textContent = "Failed to load products. Please try again.";
+    }
+}
+
+loadProducts();
+    </script>
+</body>
+</html>

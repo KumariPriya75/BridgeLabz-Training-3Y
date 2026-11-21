@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Q10 - Async Delivery Pipeline</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            margin: 30px;
+            color: #222;
+        }
+        h2 { color: #333; }
+        pre {
+            background: white;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            white-space: pre-wrap;
+        }
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+        }
+        .card {
+            background: white;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+        }
+        .card img {
+            width: 100%;
+            height: 130px;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+    <h2>Q10 - Async Delivery Pipeline</h2>
+    <pre id="output"></pre>
+    <script>
+const output = document.getElementById("output");
+
+function log(message) {
+    output.textContent += message + "\\n";
+}
+
+// Every delivery step returns a Promise with a random delay.
+function deliveryStep(message) {
+    return new Promise((resolve, reject) => {
+        const delay = Math.floor(Math.random() * 1000) + 1000;
+
+        setTimeout(() => {
+            if (Math.random() < 0.2) {
+                reject(new Error(message + " failed"));
+            } else {
+                resolve(message);
+            }
+        }, delay);
+    });
+}
+
+async function runPipeline() {
+    log("Start Pipeline");
+
+    try {
+        await deliveryStep("Step 1: Order taken")
+            .then(result => log(result));
+
+        await deliveryStep("Step 2: Food prepared")
+            .then(result => log(result));
+
+        await deliveryStep("Step 3: Package ready")
+            .then(result => log(result));
+
+        await deliveryStep("Step 4: Out for delivery")
+            .then(result => log(result));
+
+        await deliveryStep("Delivery completed!")
+            .then(result => log(result));
+    } catch (error) {
+        log("Pipeline failed!");
+        log(error.message);
+    }
+}
+
+// await pauses this function until the current Promise settles.
+// The steps execute one after another. A rejection moves control
+// to catch, so the remaining steps do not run.
+runPipeline();
+    </script>
+</body>
+</html>

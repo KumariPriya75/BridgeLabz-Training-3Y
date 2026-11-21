@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Q1 - Async Coffee Maker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            margin: 30px;
+            color: #222;
+        }
+        h2 { color: #333; }
+        pre {
+            background: white;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            white-space: pre-wrap;
+        }
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+        }
+        .card {
+            background: white;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+        }
+        .card img {
+            width: 100%;
+            height: 130px;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+    <h2>Q1 - Async Coffee Maker</h2>
+    <pre id="output"></pre>
+    <script>
+const output = document.getElementById("output");
+
+function log(message) {
+    output.textContent += message + "\\n";
+}
+
+// Each step returns a Promise and may fail randomly.
+function boilWater() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if (Math.random() < 0.2) reject("Water could not be boiled.");
+            else {
+                log("Water boiled.");
+                resolve();
+            }
+        }, 1000);
+    });
+}
+
+function brewCoffee() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if (Math.random() < 0.2) reject("Coffee brewing failed.");
+            else {
+                log("Coffee brewed.");
+                resolve();
+            }
+        }, 1500);
+    });
+}
+
+function pourCoffee() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if (Math.random() < 0.2) reject("Could not pour coffee.");
+            else {
+                log("Coffee poured into the cup.");
+                resolve();
+            }
+        }, 1000);
+    });
+}
+
+boilWater()
+    .then(() => brewCoffee())
+    .then(() => pourCoffee())
+    .then(() => log("Coffee ready for the team!"))
+    .catch(error => log("Error: " + error));
+    </script>
+</body>
+</html>
