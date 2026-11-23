@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q9 - Multi-jQuery Widgets</title>
+    <style>
+        body { font-family: Arial; padding: 25px; }
+        .widget { display: inline-block; padding: 25px; margin: 10px; background: #e8eef7; border: 2px solid #aaa; }
+        .active { background: #ffe29a; border-color: orange; }
+        .modal { display: none; position: fixed; inset: 0; background: #0008; }
+        .modalContent { background: white; width: 280px; padding: 25px; margin: 15% auto; text-align: center; }
+        #carousel { padding: 20px; background: #e6f3ff; width: 280px; }
+    </style>
+</head>
+<body>
+    <h1>Dashboard Widgets</h1>
+    <div id="carousel">Dashboard slide 1</div>
+    <div class="widget" title="This is the sales widget">Sales Widget</div>
+    <div class="widget" title="This is the users widget">Users Widget</div>
+    <div class="widget" title="This is the reports widget">Reports Widget</div>
+    <div class="widget" title="This is the messages widget">Messages Widget</div>
+    <div class="widget" title="This is the settings widget">Settings Widget</div>
+    <button id="notify">Show Notification</button>
+    <div class="modal" id="modal">
+        <div class="modalContent"><p>You have a new notification!</p><button id="close">Close</button></div>
+    </div>
+
+    <!-- Load two separate jQuery versions and release the $ alias from the first. -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script>
+        var jq1 = jQuery.noConflict();
+        jq1(function () {
+            var slides = ["Dashboard slide 1", "Dashboard slide 2", "Dashboard slide 3", "Dashboard slide 4", "Dashboard slide 5"];
+            var index = 0;
+            setInterval(function () {
+                index = (index + 1) % slides.length;
+                jq1("#carousel").text(slides[index]);
+            }, 2500);
+
+            jq1(".widget").click(function () {
+                jq1(".widget").removeClass("active");
+                jq1(this).addClass("active");
+            });
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="q9.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q8 - Blog Admin</title>
+    <style>
+        body { font-family: Arial; max-width: 750px; margin: 30px auto; }
+        .post { padding: 15px; margin: 10px 0; border: 1px solid #bbb; }
+        .featured { background: #fff2bd; border: 2px solid orange; }
+        .tag { color: #176b37; font-size: 13px; font-weight: bold; }
+        button { padding: 8px 12px; margin: 4px; }
+    </style>
+</head>
+<body>
+    <h1>Blog Post Manager</h1>
+    <div id="posts">
+        <article class="post"><h2>Learning HTML Basics</h2><p>HTML creates the structure of web pages.</p></article>
+        <article class="post"><h2>JavaScript for Beginners</h2><p>JavaScript makes websites interactive.</p></article>
+        <article class="post"><h2>CSS Design Tips</h2><p>CSS improves the look of a website.</p></article>
+        <article class="post"><h2>AI in Education</h2><p>AI can support personalized learning.</p></article>
+        <article class="post"><h2>Web Development Trends</h2><p>Modern web development keeps evolving.</p></article>
+    </div>
+    <button id="add">Add New Post</button>
+    <button id="featured">Prepend Featured Post</button>
+    <button id="remove">Remove Last Post</button>
+    <button id="tag">Add Tag to First Post</button>
+    <button id="highlight">Highlight Posts with JavaScript</button>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="q8.js"></script>
+</body>
+</html>

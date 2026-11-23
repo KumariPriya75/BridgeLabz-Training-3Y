@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q10 - Registration Validation</title>
+    <style>
+        body { font-family: Arial; max-width: 450px; margin: 35px auto; background: #f5f7fa; }
+        form { background: white; padding: 25px; border-radius: 10px; }
+        input { display: block; box-sizing: border-box; width: 100%; padding: 10px; margin: 8px 0 15px; border: 1px solid #aaa; }
+        button { padding: 10px 16px; }
+        #message { font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <form id="register">
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Enter your name">
+        <label for="email">Email</label>
+        <input type="text" id="email" placeholder="Enter your email">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Minimum 8 characters">
+        <button type="submit">Register</button>
+        <p id="message"></p>
+    </form>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="q10.js"></script>
+</body>
+</html>

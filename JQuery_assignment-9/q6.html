@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q6 - Subscription Panel</title>
+    <style>
+        body { font-family: Arial; max-width: 650px; margin: 30px auto; }
+        .topic { padding: 10px; margin: 8px 0; background: #eef2f7; }
+        button { margin: 5px; padding: 8px 12px; cursor: pointer; }
+        #message { color: green; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>Event Subscription Panel</h1>
+    <button id="subscribe">Subscribe</button>
+    <button id="unsubscribe">Unsubscribe</button>
+    <h2>Topics</h2>
+    <div id="topics">
+        <div class="topic">Technology <button class="remove">Remove</button></div>
+        <div class="topic">Education <button class="remove">Remove</button></div>
+        <div class="topic">Sports <button class="remove">Remove</button></div>
+        <div class="topic">Science <button class="remove">Remove</button></div>
+        <div class="topic">Entertainment <button class="remove">Remove</button></div>
+    </div>
+    <input id="newTopic" placeholder="Enter a new topic">
+    <button id="add">Add Topic</button>
+    <p id="message"></p>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="q6.js"></script>
+</body>
+</html>

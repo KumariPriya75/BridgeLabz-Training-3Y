@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q2 - Product Highlight</title>
+    <style>
+        body { font-family: Arial; padding: 25px; background: #f7f7f7; }
+        .products { display: flex; flex-wrap: wrap; gap: 15px; }
+        .product { background: white; border: 1px solid #ccc; padding: 18px; width: 160px; }
+        .product.selected { background: #fff2b3; border: 2px solid orange; }
+        .product[data-discount] { color: #087b35; border-bottom: 4px solid #20a35a; }
+        .details { display: none; font-size: 13px; }
+        .favorite { cursor: pointer; color: #c22; font-size: 22px; }
+    </style>
+</head>
+<body>
+    <h1>Our Products</h1>
+    <div class="products">
+        <div class="product" data-stock="yes"><h3>Headphones</h3><p>₹999</p><span class="favorite">♡</span><p class="details">Wireless, noise reduction.</p></div>
+        <div class="product" data-stock="no"><h3>Smart Watch</h3><p>₹1,499</p><span class="favorite">♡</span><p class="details">Fitness and health tracking.</p></div>
+        <div class="product" data-stock="yes" data-discount="20"><h3>Backpack</h3><p>₹799 - 20% off</p><span class="favorite">♡</span><p class="details">Water-resistant travel bag.</p></div>
+        <div class="product" data-stock="yes" data-discount="10"><h3>Keyboard</h3><p>₹1,199 - 10% off</p><span class="favorite">♡</span><p class="details">Comfortable mechanical keys.</p></div>
+        <div class="product" data-stock="yes"><h3>Mouse</h3><p>₹499</p><span class="favorite">♡</span><p class="details">Ergonomic wireless mouse.</p></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="q2.js"></script>
+</body>
+</html>

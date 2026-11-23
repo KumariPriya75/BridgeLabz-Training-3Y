@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q5 - Team Directory</title>
+    <style>
+        body { font-family: Arial; margin: 25px; }
+        .department { border: 1px solid #bbb; padding: 15px; margin: 12px 0; }
+        .employee { padding: 9px; margin: 5px; background: #f0f3f7; cursor: pointer; }
+        .highlight { background: #ffe29a; border: 2px solid orange; }
+        .contact { display: none; color: #176b37; }
+        button { padding: 8px 12px; }
+    </style>
+</head>
+<body>
+    <h1>Team Members Directory</h1>
+    <button id="collapse">Collapse / Expand Team</button>
+    <div id="team">
+        <section class="department">
+            <h2 class="deptTitle">Development Department</h2>
+            <div class="manager employee">Manager: Asha</div>
+            <div class="reports">
+                <div class="employee">Ravi <span class="contact"> - ravi@example.com</span></div>
+                <div class="employee">Neha <span class="contact"> - neha@example.com</span></div>
+                <div class="employee">Karan <span class="contact"> - karan@example.com</span></div>
+            </div>
+        </section>
+        <section class="department">
+            <h2 class="deptTitle">Design Department</h2>
+            <div class="manager employee">Manager: Meera</div>
+            <div class="reports">
+                <div class="employee">Simran <span class="contact"> - simran@example.com</span></div>
+                <div class="employee">Arjun <span class="contact"> - arjun@example.com</span></div>
+            </div>
+        </section>
+    </div>
+    <button id="random">Select Random Employee</button>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="q5.js"></script>
+</body>
+</html>
