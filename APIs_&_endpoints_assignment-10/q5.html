@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q5 - College Timetable</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 30px auto; padding: 15px; }
+        select { padding: 10px; margin: 10px 0 20px; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { border: 1px solid #ccc; padding: 12px; text-align: left; }
+        th { background: #eaf0f8; }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>College Timetable Viewer</h1>
+        <label for="day">Choose a day:</label>
+        <select id="day">
+            <option>Monday</option><option>Tuesday</option><option>Wednesday</option>
+            <option>Thursday</option><option>Friday</option><option>Saturday</option><option>Sunday</option>
+        </select>
+        <section id="schedule" aria-live="polite">Loading timetable...</section>
+    </main>
+    <script src="q5.js"></script>
+</body>
+</html>

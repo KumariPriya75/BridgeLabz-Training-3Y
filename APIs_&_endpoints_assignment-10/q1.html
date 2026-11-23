@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q1 - Real-Time Product Search</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 900px; margin: 30px auto; padding: 15px; background: #f5f7fb; }
+        input { width: 100%; box-sizing: border-box; padding: 12px; font-size: 16px; border: 1px solid #aaa; border-radius: 6px; }
+        #loading { display: none; color: #245b9e; margin: 12px 0; }
+        #results { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 15px; margin-top: 20px; }
+        .product { background: white; padding: 12px; border-radius: 8px; box-shadow: 0 2px 7px #0001; }
+        .product img { width: 100%; height: 140px; object-fit: cover; border-radius: 5px; }
+        .price { color: #168044; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Search Products</h1>
+        <label for="search">Search by product name</label>
+        <input type="search" id="search" placeholder="Start typing a product name...">
+        <p id="loading">Loading products...</p>
+        <section id="results" aria-live="polite"></section>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="q1.js"></script>
+</body>
+</html>

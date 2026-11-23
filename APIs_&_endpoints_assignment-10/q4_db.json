@@ -1,0 +1,78 @@
+{
+    "users": [
+        {
+            "id": "1",
+            "name": "Aarav"
+        },
+        {
+            "id": "2",
+            "name": "Diya"
+        },
+        {
+            "id": "3",
+            "name": "Kabir"
+        },
+        {
+            "id": "4",
+            "name": "Ananya"
+        },
+        {
+            "id": "5",
+            "name": "Rohan"
+        }
+    ],
+    "orders": [
+        {
+            "id": "101",
+            "userId": "1",
+            "total": 1200
+        },
+        {
+            "id": "102",
+            "userId": "2",
+            "total": 850
+        },
+        {
+            "id": "103",
+            "userId": "3",
+            "total": 2300
+        },
+        {
+            "id": "104",
+            "userId": "4",
+            "total": 450
+        },
+        {
+            "id": "105",
+            "userId": "5",
+            "total": 1799
+        }
+    ],
+    "products": [
+        {
+            "id": "201",
+            "name": "Headphones",
+            "price": 1499
+        },
+        {
+            "id": "202",
+            "name": "Watch",
+            "price": 2299
+        },
+        {
+            "id": "203",
+            "name": "Backpack",
+            "price": 999
+        },
+        {
+            "id": "204",
+            "name": "Keyboard",
+            "price": 1899
+        },
+        {
+            "id": "205",
+            "name": "Mouse",
+            "price": 599
+        }
+    ]
+}

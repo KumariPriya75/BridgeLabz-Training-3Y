@@ -1,0 +1,53 @@
+{
+    "timetable": [
+        {
+            "id": "1",
+            "day": "Monday",
+            "subject": "Database Management",
+            "faculty": "Dr. Sharma",
+            "time": "09:00 - 10:00"
+        },
+        {
+            "id": "2",
+            "day": "Monday",
+            "subject": "Machine Learning",
+            "faculty": "Prof. Verma",
+            "time": "10:00 - 11:00"
+        },
+        {
+            "id": "3",
+            "day": "Tuesday",
+            "subject": "Java Programming",
+            "faculty": "Ms. Gupta",
+            "time": "09:00 - 10:00"
+        },
+        {
+            "id": "4",
+            "day": "Wednesday",
+            "subject": "Computer Networks",
+            "faculty": "Mr. Singh",
+            "time": "11:00 - 12:00"
+        },
+        {
+            "id": "5",
+            "day": "Thursday",
+            "subject": "Artificial Intelligence",
+            "faculty": "Dr. Mehta",
+            "time": "12:00 - 13:00"
+        },
+        {
+            "id": "6",
+            "day": "Friday",
+            "subject": "Operating Systems",
+            "faculty": "Ms. Rao",
+            "time": "10:00 - 11:00"
+        },
+        {
+            "id": "7",
+            "day": "Saturday",
+            "subject": "Project Lab",
+            "faculty": "Mr. Khan",
+            "time": "09:00 - 11:00"
+        }
+    ]
+}

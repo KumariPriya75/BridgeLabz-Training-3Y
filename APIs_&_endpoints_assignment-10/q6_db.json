@@ -1,0 +1,34 @@
+{
+    "users": [
+        {
+            "id": "1",
+            "name": "Aarav Sharma",
+            "email": "aarav@gmail.com",
+            "password": "sample123"
+        },
+        {
+            "id": "2",
+            "name": "Diya Verma",
+            "email": "diya@gmail.com",
+            "password": "sample123"
+        },
+        {
+            "id": "3",
+            "name": "Kabir Singh",
+            "email": "kabir@gmail.com",
+            "password": "sample123"
+        },
+        {
+            "id": "4",
+            "name": "Ananya Gupta",
+            "email": "ananya@gmail.com",
+            "password": "sample123"
+        },
+        {
+            "id": "5",
+            "name": "Rohan Mehta",
+            "email": "rohan@gmail.com",
+            "password": "sample123"
+        }
+    ]
+}

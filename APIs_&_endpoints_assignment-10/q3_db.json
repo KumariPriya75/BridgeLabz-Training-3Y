@@ -1,0 +1,34 @@
+{
+    "tasks": [
+        {
+            "id": "1",
+            "title": "Read JavaScript notes",
+            "priority": "low",
+            "completed": false
+        },
+        {
+            "id": "2",
+            "title": "Complete API assignment",
+            "priority": "high",
+            "completed": false
+        },
+        {
+            "id": "3",
+            "title": "Practice LeetCode",
+            "priority": "medium",
+            "completed": true
+        },
+        {
+            "id": "4",
+            "title": "Revise jQuery AJAX",
+            "priority": "high",
+            "completed": false
+        },
+        {
+            "id": "5",
+            "title": "Organize project files",
+            "priority": "low",
+            "completed": true
+        }
+    ]
+}
